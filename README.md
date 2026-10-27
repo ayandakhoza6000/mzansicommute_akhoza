@@ -1,86 +1,35 @@
-# MzansiCommute web
+# MzansiCommute Project Operating System
 
-MzansiCommute is a pre-pilot mobility data venture focused on South Africa's minibus taxi economy.
+This package is the working source of truth for MzansiCommute's product, brand, engineering, and AI-assisted development.
 
-This repository contains the public-facing landing page and pilot-interest flow. The site is intended to establish trust with taxi owners and associations, insurers and financial-services partners, and research/public-sector partners.
+## Core documents
 
-## Product status
+- `docs/NORTH_STAR.md` — the one-page decision compass.
+- `docs/CONSTITUTION.md` — non-negotiable principles for product, data, trust, safety, and AI-assisted work.
+- `docs/PRODUCT.md` — product thesis, value exchange, and product boundaries.
+- `docs/VISION.md` — long-term vision and future state.
+- `docs/MISSION.md` — what MzansiCommute does now and how it behaves while doing it.
+- `docs/ROADMAP.md` — phased roadmap from pilot validation to scaled data infrastructure.
+- `docs/USER_PERSONAS.md` — primary users, buyers, beneficiaries, and adoption order.
+- `docs/BRAND.md` — brand personality and reference points.
+- `docs/DESIGN_SYSTEM.md` — visual and interaction principles.
+- `docs/COPY_GUIDE.md` — language, claim, and tone rules.
+- `docs/ARCHITECTURE.md` — current technical architecture and boundaries.
+- `docs/DATABASE.md` — current data model and migration rules.
+- `docs/API.md` — current public API surface and conventions.
+- `docs/SECURITY.md` — privacy, founder-safety, secret-management, and abuse boundaries.
+- `docs/DEPLOYMENT.md` — deployment assumptions and production-safety rules.
+- `docs/OPERATIONS.md` — development and pilot operations.
+- `docs/AI_GUIDELINES.md` — how coding agents should work in the repository.
+- `docs/DECISIONS.md` — architecture/product decision log.
+- `CONTRIBUTING.md` — contributor workflow.
 
-The venture is pre-pilot and pre-revenue.
+## Prompt library
 
-Any scorecard or traction number on the site must be clearly labelled as a target, verified result, or sourced published statistic. Do not present pilot targets as achieved traction.
+Reusable prompts live in `/prompts`.
 
-Founder-identifying information is intentionally excluded from the public site and repository. See `AGENTS.md` before changing copy, imagery, backing information, or public contact details.
+These prompts supplement `AGENTS.md`; they do not override it.
 
-## Stack
+## Status
 
-- Next.js App Router / React
-- vinext + Vite
-- Cloudflare Workers
-- Cloudflare D1
-- Drizzle ORM
-- TypeScript
-- ESLint with jsx-a11y
-- Tailwind 4 through PostCSS, with authored site classes in `app/globals.css`
-
-Some infrastructure identifiers still use the previous `mzansimove-*` naming. Do not rename Worker, D1, binding, deployment, or domain identifiers as part of a cosmetic brand cleanup.
-
-## Local development
-
-Requirements:
-- Node.js 22.13 or newer
-- npm
-
-Install and run:
-
-```bash
-npm ci
-npm run dev
-```
-
-## Quality checks
-
-Before opening or merging a PR:
-
-```bash
-npm run check
-```
-
-This runs linting, TypeScript checking, a production build, and the repository tests.
-
-Individual commands:
-
-```bash
-npm run lint
-npm run typecheck
-npm run test
-npm run build
-```
-
-GitHub Actions runs the baseline quality workflow for pull requests and pushes to `main`.
-
-## Database
-
-The contact form stores submissions in Cloudflare D1 through Drizzle ORM.
-
-```bash
-npm run db:generate
-npm run db:migrate
-npm run db:migrate:prod
-```
-
-Never commit production contact submissions, database exports, API tokens, or real environment secrets.
-
-## Deployment
-
-Deployment uses Cloudflare Workers through Wrangler:
-
-```bash
-npm run deploy
-```
-
-Review `wrangler.toml`, `vite.config.ts`, and `worker/index.ts` before changing deployment behaviour. These files are load-bearing.
-
-## AI/Codex contributors
-
-Read `AGENTS.md` fully before making changes. It defines product-safety, founder-privacy, accessibility, performance, security, data-migration, and definition-of-done requirements.
+This is an internal working pack. Product, story, and brand content is based on the October 2026 founder working document. Technical documentation reflects the current repository context discussed during setup and deliberately marks unresolved items rather than pretending they are settled.
