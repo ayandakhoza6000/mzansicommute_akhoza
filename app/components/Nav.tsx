@@ -28,10 +28,10 @@ export default function Nav() {
       </a>
 
       <div className="navLinks" id="main-nav-links" data-open={open} role="list">
-        <a href="#solution" onClick={close} role="listitem">Solution</a>
-        <a href="#traction" onClick={close} role="listitem">Pilot</a>
-        <a href="#founder" onClick={close} role="listitem">Backing</a>
-        <a href="#contact" onClick={close} role="listitem">Contact</a>
+        <a href="#solution" onClick={close}>Solution</a>
+        <a href="#traction" onClick={close}>Pilot</a>
+        <a href="#founder" onClick={close}>Backing</a>
+        <a href="#contact" onClick={close}>Contact</a>
       </div>
 
       <a className="navCta" href="#contact" onClick={close}>Join the pilot</a>

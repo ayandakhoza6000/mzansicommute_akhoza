@@ -28,7 +28,7 @@ export default function Home() {
 
         <section className="hero" id="top">
           <div className="heroCopy">
-            <p className="eyebrow">Built for South Africa's taxi economy</p>
+            <p className="eyebrow">Built for South Africa&apos;s taxi economy</p>
             <h1>Every trip.<br />Visible value.</h1>
             <p className="lead">
               A practical operating layer for minibus taxi owners, drivers and commuters.
